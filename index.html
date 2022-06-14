@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        <br>
+        #include <iostream> <br>
+            using namespace std;<br>
+            
+            
+            main() {<br>
+                string str = "C++ is an object oriented Language and is a superset of C";<br>
+                string str2 = "is";<br>
+                int fores = 0;<br>
+                if (str.find(str2) == -1) {<br>
+                    cout << "den vrethike h lexi";<br>
+                }<br>
+                else {<br>
+                    while (str.find(str2) != -1) {<br>
+                        fores++;<br>
+                        int pos=str.find(str2);<br>
+                        str[pos]='0';<br>
+                        cout << "h lexi " << str2 << " yparxei sti thesi " << pos << endl;<br>
+                    }<br>
+                    cout << "brethike sunolika " << fores << " fores" << endl;<br>
+                }<br>
+            }<br>
+            
+    </p>
+
+    <p>
+        <br>
+        #include <iostream><br>
+            using namespace std;<br>
+            
+            int anadromh(int n){<br>
+                int l=1;<br>
+                if (n>0) {<br>
+                    l = n * anadromh(n-1);<br>
+                }<br>
+                return l;<br>
+            }<br>
+            
+            main(){<br>
+                int ar, k;<br>
+                    
+                cout <<"dwse ton arithmo pou thes na breis to paragontiko toy: ";<br>
+                cin >> ar;<br>
+                while(ar<0) {<br>
+                    cout <<"parakalw o arithmos na einai thetikos: ";<br>
+                    cin >> ar;<br>
+                }<br>
+            
+                if (ar==0){<br>
+                    cout << "to paragontiko toy einai: " << "1";<br>
+                }<br>
+                else {<br>
+                    k = anadromh(ar);<br>
+                    cout <<  "to paragontiko toy einai : "<< k;<br>
+                }<br>
+            
+                return 0;<br>
+            }<br>
+    </p>
+
+    <p>
+        <br>
+        #include <iostream><br>
+            using namespace std;<br>
+            
+            int MKD(int a, int b) {<br>
+                int mkd = (a<b)?a:b;<br>
+                while (b%mkd!=0 || a%mkd!=0) {<br>
+                    mkd--;<br>
+                }<br>
+                return mkd;<br>
+            }<br>
+            
+            int EKP(int a, int b) {<br>
+                int ekp = (a>b)?a:b;<br>
+                while (ekp%a!=0 || ekp%b!=0) {<br>
+                    ekp++;<br>
+                }<br>
+                return ekp;<br>
+            }<br>
+            
+            main() {<br>
+                int a, b;<br>
+                cout << "dwse duo thetikous arithmous: ";<br>
+                cin >> a >> b;<br>
+                cout << "o megistos koinos diairetis tou " << a << " kai tou " << b << " einai: " << MKD(a, b) << endl;<br>
+                cout << "to elaxisto koino pollaplasio tou " << a << " kai tou " << b << " einai: " << EKP(a, b);<br>
+            }<br>
+    </p>
+</body>
+</html>
